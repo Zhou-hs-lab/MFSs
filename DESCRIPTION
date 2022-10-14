@@ -1,0 +1,18 @@
+Package: MFSs
+Title: ALL Metabolic Subtypes
+Version: 1.0.0
+Authors@R: c(
+       person("Xiaojie", "Liang",email = "liangxiaojiecom@163.com", role = c("aut")),
+       person("Baiwei", "Luo", email = "2734782653@qq.com",role = c("aut", "cre"))
+       )
+Maintainer: Baiwei Luo <2734782653@qq.com>
+Description: This R software package used GSVA to calculate the enrichment abundance of 85 metabolic pathways through transcriptome data of new samples, and based on the metabolic-feature-based subtypes (MFSs) and enrichment abundance of 85 metabolic pathways of the built-in training set, the new samples were classified as MFS1, or MFS2 or MFS3.
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Depends: 
+    GSVA,
+    pamr,
+    R (>= 2.10)
