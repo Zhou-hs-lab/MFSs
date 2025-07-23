@@ -8,5 +8,5 @@ devtools::install_github("Zhou-hs-lab/MFSs")
 
 ##Predict your data
 library(MFSs)
-
+pre.res <- MFS85(your.expr.data,gsva.methods = "gsva",ncores = 1,scale = FALSE)
 ```
