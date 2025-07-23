@@ -18,7 +18,7 @@ MFS85 <- function(expr.data,
                   ncores = 1,
                   scale = FALSE
 ){
-  #GSVA分析
+  #GSVA analysis
   message("Step1: Now we will perform GSVA analysis... \n Please wait a minite!")
   #data(genelist)
   gsvaresult<- gsva(expr = as.matrix(expr.data),
@@ -28,7 +28,7 @@ MFS85 <- function(expr.data,
                      parallel.sz=ncores
   )
 
-  #scale数据
+  #scale data
   if(scale){
     message("Step2: Scale expression data for pamr...")
     names <- dimnames(expr.data)
@@ -38,11 +38,9 @@ MFS85 <- function(expr.data,
     message("Step2: Don't scale expression data...")
   }
 
-  #pamr分型
+  #pamr classification
   message("Step3: classify the ALL metabolism type...")
   set.seed(10086)
-  #data(train.exp)
-  #data(train.class)
   x <- list(train.Exp=train.exp,train.MPS=train.class)
   data.pamr <- list(x=x$train.Exp,
                     y=x$train.MPS$cluster,
