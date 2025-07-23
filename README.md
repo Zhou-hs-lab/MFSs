@@ -3,5 +3,10 @@ This R software package used GSVA to calculate the enrichment abundance of 85 me
 
 # Usage
 ```
+##Install package
 devtools::install_github("Zhou-hs-lab/MFSs")
+
+##Predict your data
+library(MFSs)
+
 ```
